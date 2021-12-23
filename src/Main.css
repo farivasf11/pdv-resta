@@ -1,0 +1,87 @@
+:root {
+    --main-bg-text: #454545;
+    --main-orange: #EB5757;
+    --gray-light: #F3F3F3;
+}
+
+h1 {
+    margin: 10px 0;
+    color: var(--main-bg-text);
+}
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+p {
+    font-family: Nunito, sans-serif;
+    margin: 0
+}
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.toolbarContainer {
+    width: 80px;
+    min-width: 80px;
+    height: auto;
+    background-color: #ebebeb;
+}
+
+.centerContainer {
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.layoutContainer {
+    width: 100%;
+    height: auto;
+    background-color: #fbfbfb;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.venderMainLayout {
+    border: 1px solid #cbcbcb;
+    border-radius: 0 5px 5px 5px ;
+    flex: 1;
+}
+
+.itemToolbar {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.itemToolbar:hover{ 
+    background-color:  rgba(235, 87, 87, 0.12);
+}
+
+.tabsContainer {
+    display: flex;
+    margin: 0;
+}
+
+.itemTabSelected{
+    padding: 0 25px;
+    background-color: var(--gray-light);
+    color: var(--main-orange);
+    border-bottom: 4px solid var(--main-orange);
+    cursor: pointer;
+}
+
+.itemTabUnselected{
+    padding: 0 25px;
+    cursor: pointer;
+    color: var(--main-bg-text);
+}
