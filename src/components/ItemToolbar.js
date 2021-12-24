@@ -1,12 +1,17 @@
 import { Component } from "react";
+import {Link} from "react-router-dom";
 
 class ItemToolbar extends Component {
+
     render(){
-        const { src, name} = this.props
+        const { item } = this.props
         return(
-            <div className="itemToolbar">
-                <img src={src} alt={name}/>
-            </div>
+            <Link to={`/${item.path}`}>
+                <div {...this.props} className="itemToolbar">
+                    <img src={item.src}/>
+                </div>
+            </Link>
+
         )
     }
 }

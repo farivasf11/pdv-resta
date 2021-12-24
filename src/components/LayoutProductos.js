@@ -1,8 +1,8 @@
 import { Component } from "react";
 import Tab from "./Tab";
 
-class VenderContainer extends Component {
-    tabs = ['Mesas', 'Mostrador']
+class LayoutProductos extends Component {
+    tabs = ['Productos', 'Inventario']
     state = {
         tabSelected: this.tabs[0]
     }
@@ -14,12 +14,12 @@ class VenderContainer extends Component {
     render() {
         return (
             <div className="layoutContainer">
-                <h1>Vender</h1>
+                <h1>Productos</h1>
                 <div className="tabsContainer">
                     {this.tabs.map(tab => 
                         <Tab
                             name={tab}
-                            clickTab={this.clickTab}
+                            onClick={()=> this.clickTab(tab)}
                             className={this.state.tabSelected==tab ?
                                 'itemTabSelected' :
                                 'itemTabUnselected'}
@@ -33,4 +33,4 @@ class VenderContainer extends Component {
     }
 }
 
-export default VenderContainer
+export default LayoutProductos
